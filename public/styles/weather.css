@@ -1,0 +1,115 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Reset + Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", "Segoe UI", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: #ffffff;
+}
+
+/* Main Grid Container */
+.weatherbox {
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  height: 100vh;
+  width: 100%;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Country Card */
+.country {
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(14px);
+  border-radius: 18px;
+  padding: 25px;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover Effect */
+.country:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.35);
+}
+
+/* Country Name */
+.country h1 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+/* City Name */
+.country h2 {
+  font-size: 1.1rem;
+  font-weight: 400;
+  opacity: 0.85;
+  margin-bottom: 18px;
+}
+
+/* Weather Details */
+.country p {
+  font-size: 1rem;
+  margin-bottom: 8px;
+  opacity: 0.95;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+  .weatherbox {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    height: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .weatherbox {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+}
+
+
+
+.logout {
+  top: 20px;
+  margin: auto;
+  margin-bottom: 17px;
+  display: flex;
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(14px);
+  border: none;
+  border-radius: 8px;
+  padding: 10px 16px;
+  color: #ffffff;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}

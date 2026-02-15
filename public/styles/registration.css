@@ -1,0 +1,122 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url("/styles/images/red.jpg");
+  background-size: cover;
+  background-position: center;
+
+}
+
+
+h2 {
+  text-align: center;
+  color: #333;
+  margin-top: 30px;
+  font-style: italic;
+  text-shadow: 4px 4px 4px #aaa;
+  margin-top:80px;
+
+}
+
+
+
+.registration {
+  background-color: transparent;
+  border: 1px solid #ccc;
+  max-width: 400px;
+  margin: auto;
+  margin-top: 100px;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+}
+
+
+.registration label {
+  margin-bottom: 2px;
+  font-weight: bold;
+  color: black;
+  font-size: 18px;
+  font-style: italic;
+  text-shadow: 2px 2px 2px #aaa;
+}
+
+.registration input {
+  height: 30px;
+  padding: 8px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  outline: none;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+
+.registration button {
+  background-color: #28a746;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.registration button:hover {
+  background-color: #218837;
+}
+
+
+
+.exist {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 18px;
+  color: #202020;
+  font-style: italic;
+  text-shadow: 2px 2px 2px #aaa;
+}
+
+.exist a {
+  color: rgb(252, 7, 7);
+  text-decoration: none;
+  text-decoration: none;
+}
+
+.exist a:hover {
+  text-decoration: underline;
+  font-size: 19px;
+  text-shadow: 0.2px 0.2px 0.2px rgb(252, 7, 7);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.error, .usernameError, .emailError {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
+}

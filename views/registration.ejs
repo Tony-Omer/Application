@@ -1,0 +1,45 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <link rel="stylesheet" href="/styles/registration.css">
+</head>
+<body>
+
+    <h2>Get The Latest Weather Updates</h2>
+
+    <form class="registration" action="/register" method="POST">
+
+  <label>Username:</label>
+  <input type="text" name="username" required value="<%= username %>">
+  <% if (usernameError) { %>
+    <p class="usernameError"><%= usernameError %></p>
+  <% } %>
+
+  <label>Email:</label>
+  <input type="email" name="email" required value="<%= email %>">
+  <% if (emailError) { %>
+    <p class="emailError"><%= emailError %></p>
+  <% } %>
+
+  <label>Password:</label>
+  <input type="password" name="password" required>
+
+  <% if (error) { %>
+    <p class="error"><%= error %></p>
+  <% } %>
+
+  <button type="submit">Register</button>
+
+</form>
+
+
+
+
+<p class="exist">Already have an account? <a href="/login">Login</a></p>
+
+
+
+</body>
+</html>
