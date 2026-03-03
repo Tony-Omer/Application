@@ -44,30 +44,27 @@ app.use(passport.session());
 app.use(flash());
 
 
+app.use((req, res, next) => {
+  res.locals.username = "";
+  res.locals.email = "";
+
+  // Get flash messages
+  res.locals.mailError = req.flash("mailError")[0] || null;
+  res.locals.passError = req.flash("passError")[0] || null;
+  res.locals.usernameError = req.flash("usernameError")[0] || null;
+  res.locals.emailError = req.flash("emailError")[0] || null;
+
+  next();
+});
+
+
+
+
 
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
 
 
-
-
-
-// Initialize local variables for templates
-
-app.use((req, res, next) => {
-   res.locals.username = ""; 
-   res.locals.email = ""; 
-   res.locals.error = null; 
-   // login 
-   // 
-   res.locals.passwordError = null;
-    // registration specific 
-    res.locals.usernameError = null; 
-    res.locals.emailError = null; 
-    res.locals.mailError = null; 
-    res.locals.passError = null; 
-    next(); 
-});
 
 
 
@@ -210,10 +207,7 @@ passport.deserializeUser(async (id, done) => {
 
 // serving login page
 app.get("/login", (req, res) => {
-  res.render("login", {
-    mailError: null,
-    passError: null
-  });
+  res.render("login");
 });
 
 
