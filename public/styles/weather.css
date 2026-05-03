@@ -1,19 +1,5 @@
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Reset + Base */
 * {
   margin: 0;
   padding: 0;
@@ -25,6 +11,11 @@ body {
   min-height: 100vh;
   background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
   color: #ffffff;
+  background-image: url("../styles/images/sunset.jpg");
+  background-size: cover;
+  background-position: center;
+  color: black;
+
 }
 
 /* Main Grid Container */
@@ -42,7 +33,7 @@ body {
 /* Country Card */
 .country {
   background: rgba(255, 255, 255, 0.12);
-  backdrop-filter: blur(14px);
+  backdrop-filter: blur(10px);
   border-radius: 18px;
   padding: 25px;
   box-shadow: 0 10px 35px rgba(0, 0, 0, 0.25);
@@ -50,6 +41,7 @@ body {
   flex-direction: column;
   justify-content: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
 }
 
 /* Hover Effect */
@@ -63,6 +55,7 @@ body {
   font-size: 1.8rem;
   font-weight: 700;
   margin-bottom: 6px;
+  color: white;
 }
 
 /* City Name */
@@ -71,13 +64,16 @@ body {
   font-weight: 400;
   opacity: 0.85;
   margin-bottom: 18px;
+  color: white;
 }
 
 /* Weather Details */
 .country p {
-  font-size: 1rem;
+  font-size: 1.1rem;
+  font-weight: 400;
   margin-bottom: 8px;
   opacity: 0.95;
+  color: white;
 }
 
 /* Responsive Adjustments */
